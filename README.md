@@ -1,12 +1,20 @@
-First C project : handmade ML library to train on MNIST, using only stdlib and math.h .
+# Micrograd for Deep Learning  
 
-Reached 90.53% accuracy in 37s, which could be enhanced by implementing Adam optimizer, by forwarding images through batches, by adding dropout, and by using a learning rate scheduler.
-Nothing here is optimized for performance, it is rather a simple implementation of an autograd and gradient descent.
+First C project : handmade ML library to train on MNIST, using only `stdlib` and `math`. The autograd system is done value-wise with the autograd style from Andrej Karpathy [here](https://github.com/karpathy/micrograd)  
 
-Might want to improve the library in the future to have convolutional layers to make a GAN.
+I reached 90.53% accuracy on the test set, which could be enhanced by implementing Adam optimizer, by adding dropout, by using a learning rate scheduler, or simply by making a deeper model.  
+Nothing here is optimized for performance, it is just to apply theory and understand things properly.  
+Memory management is done with an arena allocator to make allocations and deallocations asymetric thus cleaner.  
 
 
-To compile, use
-- gcc arena.c value.c matrix.c read_ubyte.c main.c -o model.exe
+# To run on your own  
 
-or whichever compiler you use.
+<pre>  
+gcc arena.c value.c matrix.c read_ubyte.c main.c -o model.exe  
+./model.exe  
+
+</pre>  
+  
+or replace gcc with the compiler you use.
+
+
