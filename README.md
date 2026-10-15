@@ -9,9 +9,9 @@ Memory management is done with an arena allocator to make allocations and deallo
 
 # To run on your own  
 
-<pre>  
+<pre>
 make build
-./model.exe  
+./model.exe
 </pre>  
 
 
